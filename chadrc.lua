@@ -19,7 +19,7 @@ M.plugins = {
       config = function()
       end
     },
-    ['ray-x/go.nvim'] = {
+    ["ray-x/go.nvim"] = {
       config = function()
       end
     },
@@ -34,6 +34,10 @@ M.plugins = {
             require("custom.plugins.null_ls").setup()
         end
     },
+    ["nmac427/guess-indent.nvim"] = {
+        config = function()
+        end
+    }
   },
   override = {
     ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree,
