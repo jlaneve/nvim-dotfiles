@@ -3,7 +3,7 @@ local pluginConfs = require "custom.plugins.configs"
 local M = {}
 
 M.ui = {
-   theme = "nord",
+   theme = "chadracula",
 }
 
 M.options = {

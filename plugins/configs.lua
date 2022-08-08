@@ -1,19 +1,20 @@
 local M = {}
 
 M.nvimtree = {
-  git = {
-     enable = true,
-  },
+   git = {
+      enable = true,
+   },
 
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
+   renderer = {
+       highlight_git = true,
+        icons = {
+            show = {
+                git = true,
+            },
+        },
     },
-  },
 }
+
 
 M.cmp = function()
     local cmp = require "cmp"
@@ -23,12 +24,7 @@ M.cmp = function()
         ["<CR>"] = cmp.mapping.confirm {
            behavior = cmp.ConfirmBehavior.Replace,
         },
-        ['<Tab>'] = cmp.mapping(function(fallback)
-          fallback()
-        end, {
-          'i',
-          's',
-        }),
+        ["<Tab>"] = cmp.config.disable,
       },
       sources = {
         { name = "luasnip", group_index = 2 },
